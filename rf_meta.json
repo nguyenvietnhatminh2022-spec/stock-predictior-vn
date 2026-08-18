@@ -1,0 +1,37 @@
+{
+  "features": [
+    "ret_1d",
+    "ret_2d",
+    "ret_3d",
+    "ret_5d",
+    "ret_10d",
+    "ret_20d",
+    "dist_sma5",
+    "dist_sma10",
+    "dist_sma20",
+    "dist_sma50",
+    "vol_ret_5d",
+    "vol_ret_10d",
+    "vol_ret_20d",
+    "vol_ratio_5",
+    "vol_ratio_20",
+    "rsi_6",
+    "rsi_14",
+    "rsi_28",
+    "macd_hist",
+    "atr_14_norm",
+    "range_pos_20",
+    "slope_sma20",
+    "slope_sma50"
+  ],
+  "threshold": 0.2217828215754944,
+  "auc": 0.6074767377303963,
+  "best_params": {
+    "n_estimators": 250,
+    "min_samples_leaf": 10,
+    "max_features": "log2",
+    "max_depth": 4,
+    "class_weight": null
+  },
+  "trained_at": "2026-08-18T13:06:50.850403"
+}
