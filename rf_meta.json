@@ -22,16 +22,28 @@
     "atr_14_norm",
     "range_pos_20",
     "slope_sma20",
-    "slope_sma50"
+    "slope_sma50",
+    "bb_pos_20",
+    "stoch_14",
+    "obv_norm"
   ],
-  "threshold": 0.2157699683222205,
-  "auc": 0.6065952433030692,
-  "best_params": {
-    "n_estimators": 250,
-    "min_samples_leaf": 10,
-    "max_features": "log2",
-    "max_depth": 4,
-    "class_weight": null
-  },
-  "trained_at": "2026-08-18T14:17:04.847389"
+  "threshold": 0.40370460357225996,
+  "auc": 0.6060128651014632,
+  "best_params": {},
+  "trained_at": "2026-08-19T14:10:58.645244",
+  "config": {
+    "start_date": "2021-01-01",
+    "end_date": "2026-01-01",
+    "prediction_horizon": 3,
+    "target_threshold": 0.015,
+    "proba_threshold": 0.6,
+    "train_ratio": 0.8,
+    "embargo_days": 3,
+    "random_state": 42,
+    "cache_path": "vn30_ohlcv_cache.csv",
+    "model_path": "rf_model.joblib",
+    "scaler_path": "rf_scaler.joblib",
+    "meta_path": "rf_meta.json",
+    "predictions_path": "rf_predictions.csv"
+  }
 }

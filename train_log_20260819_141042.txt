@@ -1,0 +1,94 @@
+Command: 'C:\Users\ASUS\.venv\Scripts\python.exe' -u 'C:\Users\ASUS\Desktop\sock predictor\stock_signal_random_forest.py' --no-tune --quick --no-charts
+Started: 2026-08-19T14:10:42.219808
+
+======================================================================
+  Vietnamese Stock Signal Prediction - Random Forest
+======================================================================
+
+[1/8] Loading data ...
+[data] loaded cache: vn30_ohlcv_cache.csv (35065 rows)
+  35065 rows, 30 symbols
+  Range: 2021-01-04 -> 2025-12-31
+
+[2/8] Engineering features ...
+  Features: 26
+
+[3/8] Creating target labels ...
+  Positive class ratio: 29.59%  (9938 BUY labels / 33588 rows)
+
+[4/8] Splitting data (80/20, 3-day embargo) + scaling ...
+
+  Train period : 2021-03-19 -> 2025-01-09 (26675 rows, 955 dates)
+  Embargo gap  : [datetime.date(2025, 1, 10), datetime.date(2025, 1, 13), datetime.date(2025, 1, 14)]
+  Test  period : 2025-01-15 -> 2025-12-31 (6832 rows, 240 dates)
+  Train: (26675, 26)  Test: (6832, 26)
+
+[5/8] Training Random Forest ...
+
+[6/8] Evaluating model ...
+
+  ROC-AUC          : 0.6060
+  PR-AUC (AP)      : 0.3995
+  Threshold        : 0.404  (maximises F1)
+  BUY signals      : 5646 / 6832
+  F1               : 0.4876
+
+              precision    recall  f1-score   support
+
+    HOLD (0)       0.81      0.20      0.33      4721
+     BUY (1)       0.33      0.90      0.49      2111
+
+    accuracy                           0.42      6832
+   macro avg       0.57      0.55      0.41      6832
+weighted avg       0.67      0.42      0.38      6832
+
+
+  BASELINE COMPARISON  |  old RF: AUC ~0.589  |  new RF: AUC 0.6060  (+0.0170)
+
+[8/8] Saving artifacts ...
+  [save] model       -> rf_model.joblib
+  [save] scaler      -> rf_scaler.joblib
+  [save] meta        -> rf_meta.json
+  [save] predictions -> rf_predictions.csv
+
+==============================================================
+  TODAY'S SIGNALS  (2025-12-31)  -  threshold 0.40
+==============================================================
+  symbol     close   P(BUY)  signal
+  ----------------------------------------------------------
+  VHM        59.70    0.652  BUY  <<
+  VPL        94.20    0.623  BUY  <<
+  VRE        32.50    0.623  BUY  <<
+  STB        58.00    0.612  BUY  <<
+  BSR        15.92    0.591  BUY  <<
+  VIC       169.60    0.590  BUY  <<
+  VJC       160.76    0.578  BUY  <<
+  HDB        29.70    0.567  BUY  <<
+  GAS        72.40    0.562  BUY  <<
+  LPB        39.50    0.511  BUY  <<
+  SSI        30.25    0.507  BUY  <<
+  MCH       178.04    0.503  BUY  <<
+  TCB        34.18    0.501  BUY  <<
+  VPB        28.15    0.488  BUY  <<
+  TCX        38.77    0.484  BUY  <<
+  SHB        16.13    0.483  BUY  <<
+  GVR        26.20    0.476  BUY  <<
+  MWG        87.04    0.476  BUY  <<
+  MBB        20.26    0.474  BUY  <<
+  SAB        43.97    0.469  BUY  <<
+  CTG        35.21    0.464  BUY  <<
+  VIB        16.83    0.463  BUY  <<
+  VNM        59.31    0.457  BUY  <<
+  MSN        77.00    0.448  BUY  <<
+  FPT        94.50    0.434  BUY  <<
+  ACB        20.69    0.408  BUY  <<
+  SSB        14.48    0.403  HOLD 
+  HPG        23.56    0.390  HOLD 
+  BID        38.46    0.381  HOLD 
+  VCB        57.08    0.379  HOLD 
+  ----------------------------------------------------------
+  26 BUY / 30 symbols
+
+======================================================================
+  Pipeline complete.
+======================================================================
