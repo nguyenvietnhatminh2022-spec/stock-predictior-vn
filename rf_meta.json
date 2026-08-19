@@ -24,8 +24,8 @@
     "slope_sma20",
     "slope_sma50"
   ],
-  "threshold": 0.2217828215754944,
-  "auc": 0.6074767377303963,
+  "threshold": 0.2157699683222205,
+  "auc": 0.6065952433030692,
   "best_params": {
     "n_estimators": 250,
     "min_samples_leaf": 10,
@@ -33,5 +33,5 @@
     "max_depth": 4,
     "class_weight": null
   },
-  "trained_at": "2026-08-18T13:06:50.850403"
+  "trained_at": "2026-08-18T14:17:04.847389"
 }
