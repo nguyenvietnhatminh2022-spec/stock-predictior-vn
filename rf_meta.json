@@ -30,7 +30,9 @@
   "threshold": 0.40370460357225996,
   "auc": 0.6060128651014632,
   "best_params": {},
-  "trained_at": "2026-08-19T14:10:58.645244",
+  "calibrated": true,
+  "calibration_method": "isotonic",
+  "trained_at": "2026-08-19T14:47:49.581817",
   "config": {
     "start_date": "2021-01-01",
     "end_date": "2026-01-01",
@@ -39,11 +41,18 @@
     "proba_threshold": 0.6,
     "train_ratio": 0.8,
     "embargo_days": 3,
-    "random_state": 42,
-    "cache_path": "vn30_ohlcv_cache.csv",
-    "model_path": "rf_model.joblib",
-    "scaler_path": "rf_scaler.joblib",
-    "meta_path": "rf_meta.json",
-    "predictions_path": "rf_predictions.csv"
+    "rf_n_estimators": 250,
+    "rf_max_depth": 6,
+    "rf_min_samples_leaf": 20,
+    "rf_max_features": "sqrt",
+    "rf_bootstrap": true,
+    "rf_oob": true,
+    "rf_class_weight": "balanced_subsample",
+    "rf_random_state": 42,
+    "cv_splits": 3,
+    "calibration_method": "isotonic",
+    "feature_select_top": 15,
+    "verbose": 1,
+    "cache_path": "vn30_ohlcv_cache.csv"
   }
 }
